@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu01Degiskenler", "Konu01Degiskenler\Konu01Degiskenler.csproj", "{6FAFFE58-8924-4FD9-A889-8ADF5B1C6A03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu02TipDonusumleri", "Konu02TipDonusumleri\Konu02TipDonusumleri.csproj", "{50E2B622-DBED-44F7-B4E7-42EBF8D268AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FAFFE58-8924-4FD9-A889-8ADF5B1C6A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAFFE58-8924-4FD9-A889-8ADF5B1C6A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAFFE58-8924-4FD9-A889-8ADF5B1C6A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAFFE58-8924-4FD9-A889-8ADF5B1C6A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E2B622-DBED-44F7-B4E7-42EBF8D268AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E2B622-DBED-44F7-B4E7-42EBF8D268AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E2B622-DBED-44F7-B4E7-42EBF8D268AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E2B622-DBED-44F7-B4E7-42EBF8D268AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFEA6B69-C6FD-4BC5-9FC6-C908587A8236}
+	EndGlobalSection
+EndGlobal
