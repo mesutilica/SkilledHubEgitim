@@ -26,6 +26,37 @@
             Console.WriteLine("kesirliSayi2:" + kesirliSayi2);
             Console.WriteLine("tamSayi:" + tamSayi);
             Console.WriteLine();
+
+            Console.WriteLine("Diğer Tür Dönüştürme Yöntemleri");
+
+            int tamSayi2 = 10;
+            double kesirliSayi3 = 5.25;
+            bool islemSonuc = true;
+
+            Console.WriteLine("Lütfen Bir Sayı Giriniz:");
+            var girilenDeger = Console.ReadLine();
+
+            Console.WriteLine("Girilen değerin veri tipi : " + girilenDeger.GetType());
+
+            var parsayi = int.Parse(girilenDeger);// int.Parse metodu kendisine verilen string değerin tırnaklarını kaldırarak int tipine çevirir
+
+            Console.WriteLine("int.Parse + tamSayi2 : " + (int.Parse(girilenDeger) + tamSayi2));
+            Console.WriteLine("double.Parse + tamSayi2 : " + (double.Parse(girilenDeger) + tamSayi2));
+            Console.WriteLine("decimal.Parse + tamSayi2 : " + (decimal.Parse(girilenDeger) + tamSayi2));
+
+            Console.WriteLine();
+
+            Console.WriteLine("Convert sınıfı metotlarıyla tip dönüştürme");
+            Console.WriteLine(Convert.ToString(tamSayi2).GetType());
+            Console.WriteLine(Convert.ToDouble(tamSayi2).GetType());
+            Console.WriteLine(Convert.ToInt32(kesirliSayi3).GetType());
+            Console.WriteLine(Convert.ToString(islemSonuc).GetType());
+
+            object nesne = "123456";
+            Console.WriteLine("nesne nin veri tipi : " + nesne.GetType());
+            nesne = Convert.ToDecimal(nesne); // nesne artık decimal türünde
+            Console.WriteLine("nesne nin veri tipi : " + nesne.GetType());
+            Console.WriteLine("nesne değeri : " + nesne);
         }
     }
 }
