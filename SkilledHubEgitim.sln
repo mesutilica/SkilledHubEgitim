@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu03Operatorler", "Konu03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu04KararYapilari", "Konu04KararYapilari\Konu04KararYapilari.csproj", "{9C51521B-8F1B-4B51-AF29-705D5A321527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu05Metotlar", "Konu05Metotlar\Konu05Metotlar.csproj", "{12E96D42-6CC6-4453-8312-3C28E1234EED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9C51521B-8F1B-4B51-AF29-705D5A321527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C51521B-8F1B-4B51-AF29-705D5A321527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C51521B-8F1B-4B51-AF29-705D5A321527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E96D42-6CC6-4453-8312-3C28E1234EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E96D42-6CC6-4453-8312-3C28E1234EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E96D42-6CC6-4453-8312-3C28E1234EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E96D42-6CC6-4453-8312-3C28E1234EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
