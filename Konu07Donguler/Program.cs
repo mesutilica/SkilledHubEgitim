@@ -30,6 +30,42 @@
             {
                 Console.WriteLine("toplamın değeri : " + toplam);
             } while (toplam < 5);
+
+            Console.WriteLine();
+
+            string[] kategoriler = { "Bilgisayar", "Elektronik", "Cep Telefonu" };
+
+            Console.WriteLine("4-Foreach Döngüsü");
+            Console.WriteLine("Kategoriler:");
+            foreach (var kategori in kategoriler) // kategori(dizi öğesi) kategoriler dizisindeki her bir elemana karşılık geliyor
+            {
+                Console.WriteLine(kategori);
+            }
+
+            Console.WriteLine();
+
+            // İç içe döngü kullanımı
+            string[] urunler = { "Ürün 1", "Ürün 2", "Ürün 3" };
+            foreach (var kategori in kategoriler)
+            {
+                Console.WriteLine(kategori);
+                foreach (var urun in urunler)
+                {
+                    Console.WriteLine(urun);
+                }
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("İç İçe For Döngüsü");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"i değişkeninin değeri {i}");
+                for (int k = 0; k < 3; k++)
+                {
+                    Console.WriteLine($"\t k değişkeninin değeri {k}");
+                }
+            }
         }
     }
 }
