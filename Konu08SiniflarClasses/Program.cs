@@ -137,6 +137,51 @@
 
             Console.WriteLine();
 
+            Kategori kategori = new()
+            {
+                Id = 1,
+                KategoriAdi = "Elektronik"
+            };
+            Kategori kategori2 = new()
+            {
+                Id = 2,
+                KategoriAdi = "Bilgisayar"
+            };
+            Kategori kategori3 = new()
+            {
+                Id = 3,
+                KategoriAdi = "Telefon"
+            };
+            Console.WriteLine("Kategori : " + kategori.KategoriAdi);
+            Console.WriteLine("Kategori 2 : " + kategori2.KategoriAdi);
+            Console.WriteLine("Kategori 3 : " + kategori3.KategoriAdi);
+
+            Console.WriteLine();
+            SiniftaMetotKullanimi metotKullanimi = new();
+            var sonuc = metotKullanimi.LoginKontrol("admin", "1234");
+            if (sonuc == true)
+            {
+                Console.WriteLine("Giriş Başarılı!");
+            }
+            else
+                Console.WriteLine("Giriş Başarısız!");
+
+            var toplamasonucu = metotKullanimi.ToplamaYap(10, 8);
+            Console.WriteLine("toplamasonucu: " + toplamasonucu);
+
+            Console.WriteLine("Statik Degisken: " + SiniftaMetotKullanimi.StatikDegisken);
+
+            Console.WriteLine("Dinamik Degisken: " + metotKullanimi.DinamikDegisken);
+
+            Urun urun = new()
+            {
+                Id = 3,
+                Adi = "Klavye",
+                Durum = true,
+                Fiyati = 999,
+                Markasi = "Piranha",
+                UrunAciklamasi = "Işıklı yanar dönerli"
+            };
         }
     }
     class Kullanici
