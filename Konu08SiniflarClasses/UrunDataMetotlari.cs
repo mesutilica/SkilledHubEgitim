@@ -24,5 +24,34 @@
             };
             return urun;
         }
+        internal Urun[] Urunler()
+        {
+            return new Urun[] {
+                new() {
+                    Adi = "Bilgisayar",
+                    Durum = false,
+                    Fiyati = 42000,
+                    Id = 1,
+                    Markasi = "Monster",
+                    UrunAciklamasi = "Oyun bilgisayarı"
+                },
+                new() {
+                    Adi = "Laptop",
+                    Durum = true,
+                    Fiyati = 48000,
+                    Id = 2,
+                    Markasi = "Monster",
+                    UrunAciklamasi = "Oyun bilgisayarı"
+                },
+                new() {
+                    Adi = "Telefon",
+                    Durum = true,
+                    Fiyati = 58000,
+                    Id = 3,
+                    Markasi = "Ayfon",
+                    UrunAciklamasi = "Cep telefonu"
+                }
+            };
+        }
     }
 }

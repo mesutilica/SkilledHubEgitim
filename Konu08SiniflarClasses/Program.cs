@@ -199,6 +199,36 @@
             Console.WriteLine($"Ürün Fiyatı {mouse.Fiyati}");
             Console.WriteLine($"Ürün Açıklaması {mouse.UrunAciklamasi}");
             Console.WriteLine();
+
+            Console.WriteLine("Urun Data Metotlari");
+            UrunDataMetotlari urunDataMetotlari = new();
+            urunDataMetotlari.UrunEkle(mouse);
+            urunDataMetotlari.UrunGuncelle(mouse);
+            urunDataMetotlari.UrunSil(mouse);
+
+            Console.WriteLine("\t\tÜrünler");
+            Console.WriteLine("");
+            foreach (var item in urunDataMetotlari.Urunler())
+            {
+                Console.WriteLine($"\tÜrün Adı {item.Adi}");
+                Console.WriteLine($"\tÜrün Fiyatı {item.Fiyati}");
+                Console.WriteLine($"\tÜrün Açıklaması {item.UrunAciklamasi}");
+                Console.WriteLine($"\tÜrün Durumu {item.Durum}");
+                Console.WriteLine();
+            }
+
+            User user = new();
+            Console.WriteLine("Email Giriniz:");
+            user.Email = Console.ReadLine();
+            Console.WriteLine("Şifre Giriniz:");
+            user.Password = Console.ReadLine();
+            var giris = user.KullaniciGiris(user.Email, user.Password);
+            if (giris == true)
+            {
+                Console.WriteLine("Hoşgeldiniz!");
+            }
+            else
+                Console.WriteLine("Giriş Başarısız!");
         }
     }
     class Kullanici
