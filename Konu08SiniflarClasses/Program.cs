@@ -182,6 +182,23 @@
                 Markasi = "Piranha",
                 UrunAciklamasi = "Işıklı yanar dönerli"
             };
+            Urun mouse = new()
+            {
+                Adi = "Mouse",
+                Fiyati = 199,
+                UrunAciklamasi = "Kablolu",
+                Markasi = "A4 Tech"
+            };
+            Console.WriteLine("Ürün Bilgileri");
+            Console.WriteLine($"Ürün Adı {urun.Adi}");
+            Console.WriteLine($"Ürün Fiyatı {urun.Fiyati}");
+            Console.WriteLine($"Ürün Açıklaması {urun.UrunAciklamasi}");
+            Console.WriteLine();
+            Console.WriteLine("Ürün Bilgileri");
+            Console.WriteLine($"Ürün Adı {mouse.Adi}");
+            Console.WriteLine($"Ürün Fiyatı {mouse.Fiyati}");
+            Console.WriteLine($"Ürün Açıklaması {mouse.UrunAciklamasi}");
+            Console.WriteLine();
         }
     }
     class Kullanici
