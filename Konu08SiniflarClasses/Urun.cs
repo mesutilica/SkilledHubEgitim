@@ -11,5 +11,6 @@ namespace Konu08SiniflarClasses
         public string UrunAciklamasi { get; set; } // prop > tab a bas
         public string Markasi { get; set; }
         public bool Durum { get; set; }
+        public int KategoriId { get; set; }
     }
 }
