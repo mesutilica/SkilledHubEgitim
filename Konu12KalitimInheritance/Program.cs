@@ -61,6 +61,20 @@
             Console.WriteLine($"Fiyat: {urun.Fiyat}");
             Console.WriteLine($"Kdv: {urun.Kdv}");
             Console.WriteLine($"Eklenme Tarihi: {urun.CreateDate}");
+
+            Console.WriteLine();
+
+            Cizici[] birCizici = new Cizici[4];
+            birCizici[0] = new DogruCiz();
+            birCizici[1] = new DaireCiz();
+            birCizici[2] = new KareCiz();
+            birCizici[3] = new Cizici();
+
+            foreach (var item in birCizici)
+            {
+                item.Ciz(); // çiz metodunu çalıştır
+            }
+
         }
         // Polimorfizm - Çokbiçimlilik
         public class Cizici
@@ -75,6 +89,20 @@
             public override void Ciz()
             {
                 Console.WriteLine("Düz Çizgi");
+            }
+        }
+        public class DaireCiz : Cizici
+        {
+            public override void Ciz()
+            {
+                Console.WriteLine("Daire Çizgi");
+            }
+        }
+        public class KareCiz : Cizici
+        {
+            public override void Ciz()
+            {
+                Console.WriteLine("Kare Çizgi");
             }
         }
     }
