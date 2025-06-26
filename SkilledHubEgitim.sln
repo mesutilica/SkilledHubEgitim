@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu15AbstractClasses", "Ko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu16CollectionsKoleksiyonlar", "Konu16CollectionsKoleksiyonlar\Konu16CollectionsKoleksiyonlar.csproj", "{3C349488-321C-4A47-8D96-A15DA4E1D70B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu17HataYonetimi", "Konu17HataYonetimi\Konu17HataYonetimi.csproj", "{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{3C349488-321C-4A47-8D96-A15DA4E1D70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C349488-321C-4A47-8D96-A15DA4E1D70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C349488-321C-4A47-8D96-A15DA4E1D70B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
