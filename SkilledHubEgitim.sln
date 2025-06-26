@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu16CollectionsKoleksiyon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu17HataYonetimi", "Konu17HataYonetimi\Konu17HataYonetimi.csproj", "{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{06E903A7-B9CA-47DC-8DAB-95B08806C7F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrensipleri", "SOLIDPrensipleri\SOLIDPrensipleri.csproj", "{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFABD8FB-23A2-48DD-B4D2-22E1E79F073A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E903A7-B9CA-47DC-8DAB-95B08806C7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E903A7-B9CA-47DC-8DAB-95B08806C7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E903A7-B9CA-47DC-8DAB-95B08806C7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E903A7-B9CA-47DC-8DAB-95B08806C7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
-﻿namespace Konu17HataYonetimi
+﻿using ClassLibrary1;
+
+namespace Konu17HataYonetimi
 {
     internal class Program
     {
@@ -27,6 +29,18 @@
                 var sayi2 = Console.ReadLine();
                 KdvHesapla(double.Parse(sayi2));
             }
+
+            Category category = new Category();
+            category.Name = "Elektronik";
+            Console.WriteLine(category.Name);
+
+            Console.WriteLine();
+
+            Product product = new Product();
+            product.Name = "Oyun Bilgisayarı";
+            Console.WriteLine("Ürün Adı:");
+            Console.WriteLine(product.Name);
+
         }
         static void KdvHesapla(double fiyat)
         {
