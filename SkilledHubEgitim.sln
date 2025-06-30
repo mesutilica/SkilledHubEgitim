@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrensipleri", "SOLIDPrensipleri\SOLIDPrensipleri.csproj", "{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{322C7448-7F1A-47F2-AC46-C6B8EB188280}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF44CB5D-DFE7-46FC-8186-19E8887CDC79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322C7448-7F1A-47F2-AC46-C6B8EB188280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322C7448-7F1A-47F2-AC46-C6B8EB188280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322C7448-7F1A-47F2-AC46-C6B8EB188280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322C7448-7F1A-47F2-AC46-C6B8EB188280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
