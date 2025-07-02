@@ -45,6 +45,17 @@ namespace WindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // data grid view a kayıt ekleme
+            dgvUrunler.ColumnCount = 3; // kaç kolon veri ekleyeceğimizi ayarladık
+
+            // veri listesinin üst satırındaki başlıkları ayarlıyoruz
+            dgvUrunler.Columns[0].Name = "Ürün Adı";
+            dgvUrunler.Columns[1].Name = "Kategorisi";
+            dgvUrunler.Columns[2].Name = "Fiyatı";
+
+            // satıra yeni ürün bilgisi ekleme
+            dgvUrunler.Rows.Add(cbKategoriler.SelectedItem.ToString(), txtUrunAdi.Text, txtFiyati.Text);
+
             MessageBox.Show(cbKategoriler.SelectedItem + " Kategorisine " + txtUrunAdi.Text + " Ürünü Eklendi!");
         }
     }
