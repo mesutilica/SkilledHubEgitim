@@ -35,5 +35,73 @@ namespace WindowsFormsAppAdoNet
 
             return products;
         }
+
+
+        public DataTable GetDataTable()
+        {
+            DataTable dt = new DataTable();
+
+            ConnectionKontrol();
+
+            SqlCommand command = new SqlCommand("select * from Urunler", _connection);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            dt.Load(reader); // veritabanından okuduğumuz kayıtları boş datatable ye yüklüyoruz.
+
+            reader.Close(); // veritabanından okuyucuyu kapat
+            _connection.Close(); // veritabanı bağlantısını kapat
+            command.Dispose(); // sql komut nesnesini yoket
+
+            return dt;
+        }
+
+        public int Add(Product product)
+        {
+            int sonuc = 0;
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand(
+                "Insert into Urunler values(@UrunAdi,@UrunFiyati,@StokMiktari,@Durum)", _connection);
+            command.Parameters.AddWithValue("@UrunAdi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
+            command.Parameters.AddWithValue("@StokMiktari", product.StokMiktari);
+            command.Parameters.AddWithValue("@Durum", product.Durum);
+            sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
+        public int Update(Product product)
+        {
+            int sonuc = 0;
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand(
+                "Update Urunler set UrunAdi=@UAdi, UrunFiyati=@UrunFiyati, StokMiktari=@StokMiktari, Durum=@Durum where Id=@id", _connection);
+            command.Parameters.AddWithValue("@UAdi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
+            command.Parameters.AddWithValue("@StokMiktari", product.StokMiktari);
+            command.Parameters.AddWithValue("@Durum", product.Durum);
+            command.Parameters.AddWithValue("@id", product.Id);
+            sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
+        public int Delete(int id)
+        {
+            int sonuc = 0;
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand(
+                "Delete From Urunler where Id=@id", _connection);
+            
+            command.Parameters.AddWithValue("@id", id);
+            sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
     }
 }
