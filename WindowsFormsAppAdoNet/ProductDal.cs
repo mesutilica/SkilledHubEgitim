@@ -37,24 +37,7 @@ namespace WindowsFormsAppAdoNet
         }
 
 
-        public DataTable GetDataTable()
-        {
-            DataTable dt = new DataTable();
-
-            ConnectionKontrol();
-
-            SqlCommand command = new SqlCommand("select * from Urunler", _connection);
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            dt.Load(reader); // veritabanından okuduğumuz kayıtları boş datatable ye yüklüyoruz.
-
-            reader.Close(); // veritabanından okuyucuyu kapat
-            _connection.Close(); // veritabanı bağlantısını kapat
-            command.Dispose(); // sql komut nesnesini yoket
-
-            return dt;
-        }
+        
 
         public int Add(Product product)
         {
