@@ -84,5 +84,29 @@ namespace WindowsFormsAppAdoNet
                 MessageBox.Show("Hata Oluştu!" + hata.Message);
             }
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Kaydı Silmek İstiyor Musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    int sonuc = kategoriDAL.Delete((int)dgvKategoriler.CurrentRow.Cells[0].Value);
+                    if (sonuc > 0)
+                    {
+                        dgvKategoriler.DataSource = kategoriDAL.GetDataTable("select * from kategoriler");
+                        btnEkle.Enabled = true;
+                        btnGuncelle.Enabled = false;
+                        btnSil.Enabled = false;
+                        MessageBox.Show("Kayıt Silindi!");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Hata Oluştu!");
+                }
+            }
+
+        }
     }
 }

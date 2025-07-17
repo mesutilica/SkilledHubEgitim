@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsAppAdoNet
+﻿namespace WindowsFormsAppEntityFramework
 {
     partial class Form1
     {
@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvUrunListesi = new System.Windows.Forms.DataGridView();
-            this.txtAra = new System.Windows.Forms.TextBox();
-            this.btnAra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
@@ -43,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.txtAra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunListesi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,24 +54,8 @@
             this.dgvUrunListesi.Location = new System.Drawing.Point(12, 38);
             this.dgvUrunListesi.Name = "dgvUrunListesi";
             this.dgvUrunListesi.Size = new System.Drawing.Size(473, 400);
-            this.dgvUrunListesi.TabIndex = 0;
+            this.dgvUrunListesi.TabIndex = 1;
             this.dgvUrunListesi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunListesi_CellClick);
-            // 
-            // txtAra
-            // 
-            this.txtAra.Location = new System.Drawing.Point(12, 12);
-            this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(100, 20);
-            this.txtAra.TabIndex = 1;
-            // 
-            // btnAra
-            // 
-            this.btnAra.Location = new System.Drawing.Point(118, 12);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(75, 23);
-            this.btnAra.TabIndex = 2;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -86,10 +70,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(521, 38);
+            this.groupBox1.Location = new System.Drawing.Point(508, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(267, 196);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
             // 
@@ -194,18 +178,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı";
             // 
+            // btnAra
+            // 
+            this.btnAra.Location = new System.Drawing.Point(119, 9);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(75, 23);
+            this.btnAra.TabIndex = 6;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
+            // 
+            // txtAra
+            // 
+            this.txtAra.Location = new System.Drawing.Point(13, 9);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(100, 20);
+            this.txtAra.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAra);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUrunListesi);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ürün Yönetimi AdoNet";
+            this.Text = "Entity Framework Ürün Yönetimi";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunListesi)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -218,20 +218,20 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUrunListesi;
-        private System.Windows.Forms.TextBox txtAra;
-        private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.CheckBox cbDurum;
         private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.TextBox txtUrunFiyati;
         private System.Windows.Forms.TextBox txtUrunAdi;
-        private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAra;
+        private System.Windows.Forms.TextBox txtAra;
     }
 }
 
