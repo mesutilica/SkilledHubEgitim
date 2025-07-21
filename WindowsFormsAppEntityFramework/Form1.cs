@@ -68,16 +68,14 @@ namespace WindowsFormsAppEntityFramework
         {
             try
             {
-                var urun = new Product
-                {
-                    Id = (int)dgvUrunListesi.CurrentRow.Cells[0].Value,
-                    UrunAdi = txtUrunAdi.Text,
-                    StokMiktari = Convert.ToInt32(txtStokMiktari.Text),
-                    UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text),
-                    Durum = cbDurum.Checked
-                };
-                var product = context.Entry(urun); // context nesnesindeki products tablosuna eklenecek ürünü yakala ve product nesnesine ata
-                product.State = System.Data.Entity.EntityState.Modified; // product nesnesinin durumunu Modified-değiştirildi olarak işaretle
+                int id = (int)dgvUrunListesi.CurrentRow.Cells[0].Value; // seçilen ürünün id sini al
+                var urun = context.Products.Find(id); // veritabanındaki ürünlerden bu id ile eşleşeni bul
+                // veritabanından bulunan ürünün özelliklerini değiştir
+                urun.Durum = cbDurum.Checked;
+                urun.StokMiktari = Convert.ToInt32(txtStokMiktari.Text);
+                urun.UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text);
+                urun.UrunAdi = txtUrunAdi.Text;
+
                 int sonuc = context.SaveChanges(); // context deki değişiklikleri veritabanına yansıt
                 if (sonuc > 0)
                 {
@@ -120,6 +118,11 @@ namespace WindowsFormsAppEntityFramework
                     MessageBox.Show("Hata Oluştu!");
                 }
             }
+        }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            dgvUrunListesi.DataSource = context.Products.Where(p => p.UrunAdi.Contains(txtAra.Text)).ToList();
         }
     }
 }
