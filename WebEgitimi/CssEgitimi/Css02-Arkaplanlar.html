@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css02 Arkaplanlar</title>
+</head>
+<body>
+    <h1>Css02 Arkaplanlar</h1>
+    <p>Bu sayfa, CSS arkaplan özelliklerini tanıtmak için hazırlanmıştır.</p>
+    <h2>Arkaplan Özelliği ile Yapabilecklerimiz</h2>
+    <ol>
+        <li>Arkaplan rengi</li>
+        <li>Arkaplan resmi</li>
+        <li>Arkaplan resmi tekrar ayarı</li>
+        <li>Arkaplan ek kullanımı</li>
+        <li>Arkaplan konumunu</li>
+    </ol>
+
+    <div style="background-color: green; opacity: 0.5;">
+        Css ile elementlere Şeffaflık ayarı belirleyebiliriz.
+    </div>
+
+    <div style="background-color: rgba(0, 128, 0, 0.3);">
+        Css ile elementlere Renk ve Şeffaflık ayarı belirleyebiliriz.
+    </div>
+
+    <div style="background-image: url(/Resimler/logo.avif);">
+        <h3>Arkaplan resmi</h3>
+        <br>
+        background-image: url(/Resimler/logo.avif)
+    </div>
+
+    <div style="background-image: url(/Resimler/logo.avif); background-repeat: repeat-y;">
+        <h2>Arkaplan resmi</h2>
+        <h3>Arkaplan resmi tekrar ayarı</h3>
+        <br>
+        background-image: url(/Resimler/logo.avif)
+    </div>
+
+    <div style="background-image: url(/Resimler/logo.avif); background-repeat: no-repeat; border: 1px solid; background-position: center bottom; background-attachment: fixed;">
+        <h2>Arkaplan resmi</h2>
+        <h3>Arkaplan konumunu</h3>
+        <h3>Css ile Arkaplan Resim Sabitleme</h3>
+        <br>
+        background-image: url(/Resimler/logo.avif)
+        <br>
+        <p>
+            background-attachment: fixed;
+        </p>
+    </div>
+</body>
+</html>

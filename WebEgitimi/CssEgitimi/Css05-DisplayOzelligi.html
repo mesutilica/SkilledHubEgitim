@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css05-Display Ozelligi</title>
+</head>
+<body>
+    <h1>Css05-Display Ozelligi</h1>
+    <p>
+        html elementlerinin display özelliği bulunur
+    </p>
+    <div>
+        div elementi blok seviye bir elementtir
+    </div>
+    <span style="border: 1px solid">span elementi display inline dır</span>
+    <span style="border: 1px solid">bu yüzden spanlar yan yana dizilir</span>
+     <ul>
+        <li>Anasayfa</li>
+        <li>Hakkımızda</li>
+    </ul>
+    <h2>Display özelliği block olan elementler</h2>
+    <div>body<br />div<br />h1-h6<br />p<br />form<br />header<br />footer<br />
+        section<br />ul
+    </div>
+
+    <h3>Display özelliği inline olan elementler</h3>
+    <div>
+        span, a, img
+        <br />
+        <span>bu span içeriğidir</span>
+        <a href="#">a elementi</a>
+        <img src="/Resimler/logo.avif" alt="img elementi" title="img elementi" />
+    </div>
+
+    <hr>
+
+    <h3>Elementlerin Display Özelliğini Değiştirme</h3>
+    <p style="display:inline; border: 1px solid;">
+        p elementi display:inline ile span gibi davranabilir
+    </p>
+    <h3 style="display:inline-block; border: 1px solid;">
+        h3 style display:inline-block da kullanabiliriz
+    </h3>
+    <span style="display:block; background-color:aquamarine; border: 1px solid;">
+        span elementinin display özelliği block yapıldı
+    </span>
+
+    <hr>
+    
+    <h3>Display ile element gizleme veya gösterme</h3>
+    <div style="display:none">
+        style="display:none" ile elementi sayfada gizeleyebiliriz
+    </div>
+    
+    <h3>Visibility ile element gizleme</h3>
+    <div style="visibility:hidden">
+        style="visibility:hidden" ile elementi sayfada gizeleyebiliriz
+    </div>
+    <div>
+        visibility:hidden ile gizlediğimiz elementin alanı ekranda korunur
+    </div>
+
+    <hr />
+
+    <h2>
+        Display Flex
+    </h2>
+    <p>
+        Display özelliği flex olan elementler, içindeki elementleri esnek bir şekilde düzenler. 
+        Flexbox, özellikle responsive tasarımlar için oldukça kullanışlıdır.
+    </p>
+    <div style="display:flex">
+        Bir elemente style="display:flex" veya style="display:inline-flex" özelliği verilerek esnek hale getirilebilir.
+    </div>
+    <div id="flexDiv">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+    </div>
+    <style>
+        #flexDiv {
+            display: flex;
+            
+            width: 300px;
+            border: 1px solid black;
+        }
+        #flexDiv div {
+            background-color: lightblue;
+            border: 1px solid blue;
+            margin: 5px;
+            padding: 10px;
+            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+        }
+    </style>
+    <h4>flex-wrap Özelliği</h4>
+    <p>
+        kapsayıcı elemente sığmayan içeriklerin alt satırdan devam etmesini sağlar.
+    </p>
+    <style>
+        #flexDiv {
+            flex-wrap: wrap;
+        }        
+    </style>
+</body>
+</html>
