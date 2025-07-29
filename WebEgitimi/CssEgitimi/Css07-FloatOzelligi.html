@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css07-FloatOzelligi</title>
+</head>
+<body>
+    <h1>Css Float Özelligi</h1>
+    <div>
+        <div style="background-color: green;">
+            Css Float Özelliği
+        </div>
+        <div style="float:left; background-color:yellowgreen; border:1px solid">
+            float:left özelliği verilen div sola yapışır, içeriği kadar yer kaplar, 
+            sonrasında gelen element buradan hizalanarak akışa katılır.
+        </div>
+        <div>
+            float:left verilen elementten sonraki
+        </div>
+        <div>
+            float:left verilen elementten sonraki 2.
+        </div>
+        <div>
+            float:left verilen elementten sonraki 3.
+        </div>
+    </div>
+    <hr>
+    <div style="float:right; background-color:yellowgreen; border:1px solid">
+        float:right özelliği verilen div sağa yapışır, içeriği kadar yer kaplar, 
+        sonrasında gelen element buradan hizalanarak akışa katılır.
+    </div>
+    <div style="background-color: yellow; border:1px solid">
+        float:right verilen elementten sonraki
+    </div>
+    <div>
+        float:right verilen elementten sonraki 2.
+    </div>
+    <div>
+        float:right verilen elementten sonraki 3.
+    </div>
+
+    <div id="urunler">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <style>
+        #urunler {
+            width: 500px;
+            height: 240px;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+        #urunler div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 100px; /* Vertically center the text */
+        }
+    </style>
+
+    <hr>
+
+    <div style="clear:both">
+    <h3>Float-Clear</h3>
+    <p>
+        Float özelliğini kaldırmamız gereken durumlarda kullanılır
+    </p>
+    <div style="float:left; background-color:bisque;">
+        float:left divi
+    </div>
+    <div style="background-color: brown; clear:both;">
+        float:left den sonraki div
+    </div>
+    <p>
+        float özelliği uygulanmış bir elementten sonraki elementi yapışma olayından kurtarmak için clear:left - right -
+        both seçeneklerinden birini kullanırız.
+        <br />
+        clear:left - float:left in etkisini kaldırır
+        <br />
+        clear:right - float:right ın etkisini kaldırır
+        <br />
+        clear:both - hem float:left in hem de float:right ın etkisini kaldırır
+    </p>
+</div>
+
+<div id="kapsayici">
+    <div id="resim">
+        <img src="https://picsum.photos/200/100" alt="Resim" />
+    </div>
+    <div id="yazi">
+        <p>
+        float özelliği uygulanmış bir elementten sonraki elementi yapışma olayından kurtarmak için clear:left - right -
+        both seçeneklerinden birini kullanırız.
+        <br />
+        clear:left - float:left in etkisini kaldırır
+        <br />
+        clear:right - float:right ın etkisini kaldırır
+        <br />
+        clear:both - hem float:left in hem de float:right ın etkisini kaldırır
+        </p>
+    </div>
+</div>
+
+<style>
+    #kapsayici {
+        width: 500px;
+        background-color: antiquewhite;
+        border: 5px outset red;
+        padding: 1em;
+    }
+    #resim {
+        float: right;
+        padding: 1em;
+        border: 1px solid black;
+    }
+</style>
+
+</body>
+</html>

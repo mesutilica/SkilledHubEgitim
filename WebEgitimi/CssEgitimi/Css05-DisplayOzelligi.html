@@ -97,7 +97,7 @@
             border: 1px solid blue;
             margin: 5px;
             padding: 10px;
-            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+            /*flex: 1 1 30%;  Flex-grow, flex-shrink, flex-basis */
         }
     </style>
     <h4>flex-wrap Özelliği</h4>
@@ -109,5 +109,101 @@
             flex-wrap: wrap;
         }        
     </style>
+
+    <h3>flex-direction</h3>
+    <p>
+        Öğelerin yönünü belirlememizi sağlar. Yatay veya dikey olarak yerleşmesini ayarlayabilirizi.
+    </p>
+    <style>
+        #flexDiv {
+            flex-direction: column;
+            /* varsayılanda row */
+        }
+    </style>
+
+    <h3>
+        Align-Content
+    </h3>
+    <p>
+        Çok satırlı yapılarda öğelerin dikey eksende hizasını ayarlar.
+    </p>
+    <p>
+        Kullanımı için kapsayıcı öğeye strech,
+        flex-start : başa hizala,
+        flex-end: sona hizala,
+        center: merkeze hizala,
+        space-between: ve space-evenly ile aralıklı hizalama yapabiliriz
+    </p>
+
+    <style>
+        #flexDiv {
+            max-width: 700px;
+            min-height: 350px;
+            flex-direction: row;
+            align-content: center;
+            /*  */
+        }
+    </style>
+
+    <h3>
+        Justify content
+    </h3>
+    <p>
+        Öğelerin yatay eksende hizalamasını sağlar.
+        <br />
+        Kullanımı için kapsayıcı öğeye Justify-content: space-evenly, center, flex-start, flex-end, space-around,
+        space-between.. şeklinde kod uygulanır
+    </p>
+    <style>
+        #flexDiv {
+            flex-direction: row;
+            justify-content: space-evenly;
+            /*  */
+        }
+        #flexDiv div{
+            width: 30px;
+        }
+    </style>
+
+    <h3>Order Özelliği ile Elemenaları Sıralama</h3>
+    <i>Sıralama özelliği uygulanan elemanlar sadece kendi aralarında sıralanır!</i>
+    <style>
+        .item5 {
+            order: 6
+        }
+    
+        .item6 {
+            order: 5
+        }
+    </style>
+
+    <h3>Flex Grow</h3>
+    <p>
+        Bir öğeyi diğerlerine göre daha büyük göstermek için kullanılır
+    </p>
+    <style>
+        .item5 {
+            flex-grow: 2
+        }
+    
+        .item6 {
+            flex-grow: 5
+        }
+    </style>
+
+    <h3>Flex Shrink</h3>
+    <p>
+        Bir öğeyi diğerlerine göre daha küçük göstermek için kullanılır
+    </p>
+    <style>
+        #flexDiv div:first-child {
+            flex-shrink: 2
+        }
+    
+        #flexDiv div:last-child {
+            flex-shrink: 2
+        }
+    </style>
+
 </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css06-PositionOzelligi</title>
+</head>
+<body>
+    <h1>Css Position Özelliği</h1>
+    <p>
+        Html elementlerini ekranda konumlandırmak için kullanılır.
+    </p>
+    <h2>5 Farklı Position Özelliği Var</h2>
+    <ol>
+        <li>
+            static: varsayılan değer, eleman yerinde konumlanır
+        </li>
+        <li>
+            relative: göreceli
+        </li>
+        <li>
+            fixed: istenilen noktaya sabitlenir
+        </li>
+        <li>
+            absolute: mutlak
+        </li>
+        <li>
+            sticky: yapışkan
+        </li>
+    </ol>
+    
+    <hr />
+
+     <h2>Position-Relative</h2>
+    <div style="position:relative; height: 333px; border: 1px solid">
+        <p>
+            position:relative olan öğe 4 konumdan etkilenir. sol, sağ, alt, üst
+        </p>
+        <div style="position: relative; width: 180px; top: 118px; left:18px; border: 1px solid">
+            position:relative olan div
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Position: fixed</h2>
+    <p>
+        elementin sayfada hep aynı konumda kalmasını sağlar.
+    </p>
+    
+    <div style="position:fixed; bottom:1rem; right:1rem; width:25px; height:25px; background-color:blue; text-align:center;">
+        <a href="#" style="color: white;">/\</a>
+    </div>
+
+    <hr>
+
+    <h2>position:absolute</h2>
+    <p>
+        Elementlerin mutlaka o konumda olması gerektiğinde kullanılır. Yerini diğer elementlere göre ayarlar.
+    </p>
+    <div style="position:relative; border:1px solid; min-height:180px">
+        Kapsayıcı div e mutlaka position relative veriyoruz.
+        <div
+            style="position: absolute; bottom: 1.8rem; right: 2.5em; background-color: blue; color: white; text-align: center;">
+            position: absolute
+        </div>
+    </div>
+    
+    <hr />
+
+    <h2>position:sticky</h2>
+    <p>
+        Kullanıcının kaydırma konumuna göre öğe konumlandırmamızı sağlar.
+    </p>
+    
+    <div style="position:sticky; top:0; padding:5px; background-color: aquamarine; border:2px inset red">
+        position:sticky
+    </div>
+    
+    <div style="min-height:900px">
+        position:sticky den sonraki içerik
+    </div>    
+    <hr>
+
+    <h2>Öğelerin Çakışma Durumu</h2>
+    <p>
+        Web uygulamalarında position kullanımında bazen öğeler üst üste biner.
+    </p>
+    <div style="position:relative; width:300px; height: 300px; border:3px outset">
+            Burası kapsayıcı div içeriği
+        <div style="position:absolute; top:70px; right:1rem; border:5px outset yellow; background-color:green; z-index:5;">
+            1. div z-index:5
+        </div>
+        <div
+            style="position: absolute; top: 84px; right: 1.8rem; border: 5px outset yellow; background-color: green; z-index: 10">
+            2. div
+        </div>
+    </div>
+</body>
+</html>
