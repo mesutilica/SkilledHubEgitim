@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width="device-width", initial-scale=1.0">
+    <title>Flex ile wb Tasarım</title>
+    <style>
+      #anaDiv {
+        width: 1000px;
+        margin: auto;
+      }
+      .row {
+        display: flex;
+      }
+      .col{
+            width: 33%;
+        }
+      header {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .text-center{
+            text-align: center;
+        }
+        footer{
+            border-top: 1px solid gold;
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+        footer ul li{
+            margin-bottom: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="anaDiv">
+      <header class="row">
+        <div class="col">
+          <img src="/Resimler/logo.avif" alt="" />
+        </div>
+        <div class="col">
+          <form action="">
+            <input type="search" name="q" id="ara" placeholder="Ara" required />
+          </form>
+        </div>
+        <div class="col">
+          <a href="giris.html">Giriş Yap</a>
+          <a href="uyeol.html">Üye Ol</a>
+        </div>
+      </header>
+
+      <div class="row">
+        <div class="roomSet top">
+          <img
+            src="https://hillsa.com.tr/front/uploads/urun/kategori/d83c2a34bc91c27589d532fc1f248c4201d1ccf0.webp"
+            alt="KOLTUK TAKIMLARI"
+            width="100%"
+          />
+          <div class="container">
+            <div>
+              <h1 class="text-center">KOLTUK TAKIMLARI</h1>
+              <p></p>
+              <p class="text-center">Hillsa Mobilya Koltuk Takımları</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col">
+          <img
+            src="https://hillsa.com.tr/front/uploads/urun/839e86d126bac49737286f5f840543ef34043556.webp"
+            alt="Navona Plus Koltuk Takımı"
+            width="333"
+          />
+          <span
+            ><strong>Navona Plus Koltuk Takımı</strong>
+            <br />
+            KOLTUK TAKIMLARI</span
+          >
+        </div>
+        <div class="col">
+          <img
+            src="https://hillsa.com.tr/front/uploads/urun/38e5d89cb99fad3de19fce74eed715497255bbd8.webp"
+            alt="Slope Koltuk Takımı"
+            width="333"
+          />
+          <span
+            ><strong>Slope Koltuk Takımı</strong><br />KOLTUK TAKIMLARI</span
+          >
+        </div>
+        <div class="col">
+          <img
+            src="https://hillsa.com.tr/front/uploads/urun/df4829891de9521b8c175db3a1d7fae09ac66292.webp"
+            alt="Harley Koltuk Takımı"
+            width="333"
+          />
+          <span
+            ><strong>Harley Koltuk Takımı</strong><br />KOLTUK TAKIMLARI</span
+          >
+        </div>
+      </div>
+
+      <footer class="row">
+        <div class="col">
+          <img src="https://hillsa.com.tr/front/img/logo.png" alt="logo" />
+          <p style="padding-right: 18px">
+            HİLLSA KISA HİKAYEMİZ Firmamız, 20 yıllık pamuk iplikçiliği ve
+            pamuklu dokuma deneyimi sonrası, 2009 yılında 1994 yılından beri
+            sektörün içinde olan bir kuruluşla güç birliği yaparak koltuk
+            üretimine başlamış bir girişimci hikayesidir. 2017 de üretim hattına
+            komple boyalı mobilya üretimini eklemiş, 2020 yılında da genç odası
+            üretimine başlamıştır.
+            <a href="">Devamı..</a>
+          </p>
+        </div>
+        <div class="col text-center">
+          <h3>BLOG</h3>
+          <img
+            src="https://hillsa.com.tr/front/uploads/blog/ef4385626553f3aec19926b0e3bf0e3f05f82ede.webp"
+            alt=""
+            width="100"
+          />
+          <p>2025 İstanbul Mobilya Fuarı</p>
+
+          <img
+            src="https://hillsa.com.tr/front/uploads/blog/9f9ed42572439156243a549a76f07ad241a7c3c5.webp"
+            alt=""
+            width="100"
+          />
+          <p>İstanbul Mobilya Fuarı 2022</p>
+
+          <img
+            src="https://hillsa.com.tr/front/uploads/blog/56a1fe4dea65e7891fd7053d0e647d16cb1bf94e.webp"
+            alt=""
+            width="100"
+          />
+          <p>Imob Expo 2020</p>
+        </div>
+        <div class="col">
+          <h3 class="text-center">İLETİŞİM</h3>
+          <ul>
+            <li class="phone">
+              <a href="tel:+90 224 712 1999">+90 224 712 1999</a><br />
+              +90 224 712 1999 Fax
+            </li>
+            <li class="mail">
+              <a href="mailto:info@hillsa.com">info@hillsa.com</a>
+            </li>
+            <li class="map">
+              Cumhuriyet Mahallesi Yıldırım Beyazıt Cad. No:5/5B İnegöl BURSA
+              TÜRKİYE
+            </li>
+            <li class="map">
+              İnegöl - Bursa Karayolu Üzeri Mobiliyum AVM A-Etap 2.Kat No:26
+              İnegöl / BURSA
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
