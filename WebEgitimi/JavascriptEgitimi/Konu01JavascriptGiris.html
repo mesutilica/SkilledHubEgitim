@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu01JavascriptGiris</title>
+</head>
+<body>
+    <h1>Konu01 Javascript Giriş</h1>
+    <p>
+        Javascript tarayıcılar üzerinde çalışabilen bir programlama dilidir.
+    </p>
+    <p>
+        Java ile Javascript farklı programlama dilleridir.
+    </p>
+    <p>
+        Javascript i web sayfalarının herhangi bir yerinde script taglarını açarak yazabiliriz.
+    </p>
+    <script>
+        // js de tekli yorum satırı
+        /*
+            js de çoklu
+             yorum 
+             satırı
+        */
+        document.write("Bu yazı javascript ile ekrana yazdırıldı"); // js ile ekrana metin yazdırma
+        document.writeln("<h3>Bu yazı javascript ile ekrana yazdırıldı</h3>");// js ile ekrana html yazdırma
+
+        console.log("Bu yazı console.log metoduyla tarayıcı konsoluna gönderildi.");
+        console.error("konsola hata mesajı yazdırmak için kullanabiliriz");
+        console.warn("konsola uyarı mesajı yazdırmak için kullanabiliriz")
+
+        // Javascript ile değişken tanımlama
+        // Js de değişken tipleri : Any, number, string, undefined
+        var urunAdi, marka = "Monster";
+        var urunFiyati = 58000, kdv = 20;
+
+        console.log("Ürün Adı : ", urunAdi);
+        console.log("Ürün Marka : ", marka);
+        console.log("Ürün Fiyatı : ", urunFiyati);
+        console.log("Ürün kdv : ", kdv);
+
+        // let ile değişken tanımlama
+        //console.warn("meslek : ", meslek); // meslek değişkeninini burada henüz tanımlamadığımız için undefined geliyor
+
+        let isim; let soyisim; let meslek;
+
+        isim = "Murat"; soyisim = "Yılmaz"; meslek = "Kaldırım mühendisi"
+
+        console.log("Kişi Bilgileri : ", isim + " " + soyisim);
+        console.warn("meslek : ", meslek);
+
+        // Javascript de sabitler
+        // tanımlandıktan sonra değiştirilmemesi gereken değerler için
+        const sabitDeger = "Bu veri sabittir, değiştirilemez, değiştirilmesi teklif dahi edilemez!"
+        const yeniTRkdv = 20;
+
+        console.warn("sabitDeger : ", sabitDeger);
+
+        // sabitDeger = "sabit Deger"; // Uncaught TypeError: Assignment to constant variable.
+    </script>
+
+    <h3>Javascript de Nesneler</h3>
+    
+    <p>
+        C# taki sınıflardan oluşturduğumuz nesne yapısına benzer.
+    </p>
+
+    <script>
+        let araba = { marka: "TOGG", model: "T10x", yil: 2023, renk: "Kırmızı" } // örnek nesne tanımlaması
+        var kisi = { adi: "Alp", soyadi: "Arslan", yas: 18, meslek: "Mühendis" } // let veya var ile nesne tanımlayabiliriz
+
+        console.log('araba :>> ', araba);
+        console.log('kisi :>> ', kisi);
+        
+        console.log('araba bilgisi :>> ', araba.marka);
+        console.log('kisi bilgisi :>> ', kisi.adi + " " + kisi.soyadi);
+    </script>
+</body>
+</html>

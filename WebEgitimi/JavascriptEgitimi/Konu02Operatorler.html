@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konu02Operatorler</title>
+  </head>
+  <body>
+    <h1>Konu02 Operatorler</h1>
+    <h2>Aritmetik Operatörler</h2>
+    <p>Matematiksel işlemler için kullanılır</p>
+    <script>
+      let sayi1 = 10,
+        sayi2 = 8;
+      console.error("Sayı 1 : " + sayi1 + " - Sayı 2 : " + sayi2);
+      console.log("Sayı 1 + sayi 2 = ", sayi1 + sayi2);
+      console.log("Sayı 1 + sayi 2 = " + sayi1 + sayi2); // burada string değerle sayısal değeri birleştiriyor
+      console.log("Sayı (sayi1 + sayi2) = " + (sayi1 + sayi2)); // birleştirmeyi engellemek için
+
+      console.log("Sayı 1 - sayi 2 = ", sayi1 - sayi2);
+      console.log("Sayı 1 * sayi 2 = ", sayi1 * sayi2);
+      console.log("Sayı 1 / sayi 2 = ", sayi1 / sayi2);
+      console.log("Sayı 1 % sayi 2 = ", sayi1 % sayi2);
+    </script>
+
+    <h2>Atama Operatörleri</h2>
+    <p>=, +=, -=, *=, /=, %=</p>
+    <script>
+      console.warn("Atama Operatörleri");
+      console.log(
+        "Çalışması :>> Normal değişken kullanım mantığında = operatörü değişkenin değerini ezip yeni değeri atarken += ve diğer operatörler değişkenin bir önceki değerini koruyarak yeni değeri onun üzerine ekler."
+      );
+      console.error("Sayı 1 : " + sayi1 + " - Sayı 2 : " + sayi2);
+
+      console.log("Sayı 1 += sayi 2 = ", (sayi1 += sayi2));
+      console.log("Sayı 1 -= sayi 2 = ", (sayi1 -= sayi2));
+      console.log("Sayı 1 *= sayi 2 = ", (sayi1 *= sayi2));
+      console.log("Sayı 1 /= sayi 2 = ", (sayi1 /= sayi2));
+      console.log("Sayı 1 %= sayi 2 = ", (sayi1 %= sayi2));
+    </script>
+
+    <h2>Karşılaştırma Operatörleri</h2>
+    <p>
+      == Eşit mi, === değerler ve veri tipleri eşit mi, != eşit değilse, !==
+      değerler ve tipler eşit değilse, > büyüktür, < küçüktür,>= büyük veya
+      eşitse, <= küçük veya eşitse
+    </p>
+    <script>
+      console.warn("Karşılaştırma Operatörleri");
+      sayi2 = "2";
+      console.error("Sayı 1 : " + sayi1 + " - Sayı 2 : " + sayi2);
+      console.log("Sayı 1 == sayi 2 ; ", sayi1 == sayi2);
+      console.log("Sayı 1 === sayi 2 ; ", sayi1 === sayi2);
+      console.log("Sayı 1 != sayi 2 ; ", sayi1 != sayi2);
+      console.log("Sayı 1 !== sayi 2 ; ", sayi1 !== sayi2);
+      console.log("Sayı 1 > sayi 2 ; ", sayi1 > sayi2);
+      console.log("Sayı 1 < sayi 2 ; ", sayi1 < sayi2);
+      console.log("Sayı 1 <= sayi 2 ; ", sayi1 <= sayi2);
+      console.log("Sayı 1 >= sayi 2 ; ", sayi1 >= sayi2);
+    </script>
+
+    <h2>Mantıksal Operatörler</h2>
+    <p>&& And (Ve) Operatörü - || Or (Veya) Operatörü</p>
+    <script>
+      console.warn("Mantıksal Operatörler");
+
+      console.error("Sayı 1 : " + sayi1 + " - Sayı 2 : " + sayi2);
+
+      console.log("Sayı 1 < sayi 2 && sayi1 == sayi2 : ", sayi1 < sayi2 && sayi1 == sayi2);
+
+      console.log("Sayı 1 < sayi 2 || sayi1 == sayi2 : ", sayi1 < sayi2 || sayi1 == sayi2);
+    </script>
+  </body>
+</html>
