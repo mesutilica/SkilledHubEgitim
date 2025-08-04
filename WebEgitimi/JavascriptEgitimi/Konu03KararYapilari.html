@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu03KararYapilari</title>
+</head>
+<body>
+    <h1>Js Karar Yapıları</h1>
+    <p>
+        Program kodlarımızı içeriğe göre yönlendirmemizi sağlayan if, else if, else ve switch case yapısı
+    </p>
+    <script>
+        var sayi = 18
+        if (sayi > 0) {
+            console.log("Sayı pozitif");
+        }
+        else if (sayi == 0) {
+            console.log("Sayı sıfır");
+        }
+        else {
+            console.log("Sayı negatif");
+        }
+        //console.log('js 6 code snippets :>> ', deneme);
+        // ternary operatörü kullanımı
+        console.log('ternary operatörü kullanımı :>> ');
+        console.warn(sayi > 0 ? "Sayı pozitif" : "Sayı negatif");
+
+        // Switch case
+        switch (sayi) {
+            case 18: console.log("Sayı pozitif")
+                break;
+            case -18: console.log("Sayı negatif")
+                break;
+            default: console.log("Sayı sıfır")
+                break;
+        }
+    </script>
+</body>
+</html>

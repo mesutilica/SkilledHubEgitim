@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu05 Fonksiyonlar</title>
+</head>
+<body>
+    <h1>Konu05 Fonksiyonlar</h1>
+    <script>
+        function fonksiyon(params) {
+            console.log('fonksiyona gönderilen değer :>> ', params);
+        }
+
+        fonksiyon("fonksiyona gönderilen değer")
+        fonksiyon(18)
+        fonksiyon(true)
+
+        // Örnek 2
+        function ToplamaYap(sayi1, sayi2) {
+            console.log("Toplam : ", sayi1 + sayi2);
+        }
+
+        ToplamaYap(10, 8) // metoda parametrelerin gönderimi
+        ToplamaYap(50, 8)
+        ToplamaYap(30, 4)
+
+
+        console.warn("Geriye değer döndüren metot");
+        function cikarmaYap(sayi1, sayi2) {
+            return sayi1 - sayi2; // metodun çağrılacağı yere işlem sonucunu return ifadesiyle döndürüyoruz
+        }
+        console.log("Toplam : ", cikarmaYap(10, 8));  // metoda parametrelerin gönderimi
+        console.log("Toplam : ", cikarmaYap(50, 8));
+
+        console.warn("Örnek 4: sayfa arkaplan ve yazı rengini değiştirme");
+
+        function renkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi
+            document.fgColor = yaziRengi
+        }
+        renkDegistir("red", "white")
+        renkDegistir("black", "white")
+
+        console.warn("Hazır gelen diğer özellikler:");
+        console.log("pencere iç yüksekliği : ", window.innerHeight);
+        console.log("pencere iç genişliği : ", window.innerWidth);
+
+        console.log("pencere dış yüksekliği : ", window.outerHeight);
+        console.log("pencere dış genişliği : ", window.outerWidth);
+    </script>
+</body>
+</html>

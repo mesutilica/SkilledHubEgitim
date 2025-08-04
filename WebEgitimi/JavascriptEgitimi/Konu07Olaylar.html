@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu07Olaylar</title>
+</head>
+<body>
+    <h1>Konu07 Olaylar</h1>
+    <p>
+        Javascript ile ekranda kullanıcının yaptığı eylemleri yakalayıp aksiyon almamızı sağlar.
+    </p>
+
+    <h2>onClick Olayı</h2>
+    <script>
+        function renkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi
+            document.fgColor = yaziRengi
+        }
+    </script>
+    <input type="button" value="Kırmızı Beyaz" onclick="renkDegistir('red','white')" />
+    <input type="button" value="Siyah Beyaz" onclick="renkDegistir('black','white')" />
+    <input type="button" value="Beyaz Siyah" onclick="renkDegistir('white','black')" />
+    <input type="button" value="Mavi Sarı" onclick="renkDegistir('blue','yellow')" />
+    <hr>
+    
+    <h2>onClick Olayı - Cinsiyet seçme</h2>
+    <form name="cinsiyet">
+        <input type="radio" name="cins" /> Kadın
+        <input type="radio" name="cins" /> Erkek
+        <input type="button" value="Seç" onclick="Goster()" />
+    </form>
+    <script>
+        function Goster() {
+            var secilenCinsiyet = ""
+            if (document.cinsiyet.cins[0].checked) {
+                secilenCinsiyet = "Kadın"
+            }
+            if (document.cinsiyet.cins[1].checked) {
+                secilenCinsiyet = "Erkek"
+            }
+            alert("secilen Cinsiyet : " + secilenCinsiyet) // alert metodu kullanıcıya pencere ile mesaj vermemizi sağlar
+        }
+    </script>
+
+    <hr>
+
+    <h2>onClick Confirm Olayı</h2>
+    <p>
+        onClick olayında confirm metoduyla kullanıcıya işlemi onaylama penceresi gösterilir.
+    </p>
+    <script>
+        function kontrol() {
+            if (confirm("Sayfadan ayrılmak istiyor musunuz?")) { // confirm ile tamam-iptal seçeneği sunulur
+                // location.href = "Konu06StringMetotlari.html" // eğer tamam derse sayfayı js ile bu sayfaya yönlendir
+                location.href = "https://www.google.com.tr/" // kullanıcıyı dış siteye yönlendirme
+                //window.open("https://www.google.com.tr/") // sayfayı yeni sekmede açtırmak için
+            }
+        }
+    </script>
+    <input type="button" value="Sayfadan ayrıl" onclick="kontrol()" />
+</body>
+</html>
