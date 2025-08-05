@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu08 Diziler</title>
+</head>
+<body>
+    <h1>Konu08 Diziler</h1>
+    <script>
+        var sayilar = [3, 5, 7, 9]
+        var toplam = 0
+        for (var i in sayilar) { // dizi yapılarında kullanılmak için for in metodu bulunur
+            toplam += sayilar[i]
+            document.write("i nin değeri : " + i + " - sayilar[i] : " + sayilar[i], "<br>")
+        }
+
+        document.write("toplam in değeri : " + toplam)
+
+        for (var i of sayilar) { // javascript de for of döngü türü c# taki foreach gibi çalışır
+            document.write("<br> i nin değeri : " + i)
+        }
+
+        document.write("<hr>")
+        
+        var arabalar = ["Fiat", "Peugeot", "TOGG"]
+        console.log(arabalar);
+
+        let arac = arabalar[2]
+        document.write("<br><br> Seçilen araç : " + arac)
+        console.log(arac);
+
+        document.write("<hr>")
+        
+        var meyveler = new Array("Elma", "Armut", "Kiraz", "Mandalina", "Portakal");
+        console.log(meyveler);
+        for (var i in meyveler) {
+            document.write("<h3> meyve i : " + i + "</h3>")
+            document.write("<h3> meyve meyveler[i] : " + meyveler[i] + "</h3>")
+        }
+        document.write("<h3>listedeki ilk meyve meyveler[0] : " + meyveler[0] + "</h3>")
+        for (var meyve of meyveler) {
+            document.write("<h3>" + meyve.toUpperCase() + "</h3>")
+        }
+    </script>
+</body>
+</html>

@@ -55,9 +55,87 @@
                 // location.href = "Konu06StringMetotlari.html" // eğer tamam derse sayfayı js ile bu sayfaya yönlendir
                 location.href = "https://www.google.com.tr/" // kullanıcıyı dış siteye yönlendirme
                 //window.open("https://www.google.com.tr/") // sayfayı yeni sekmede açtırmak için
-            }
+            }            
         }
+
+        function urunSil() {
+                if (confirm("Ürünü silmek istediğinize emin misiniz?")) { // confirm ile tamam-iptal seçeneği sunulur
+                    // burada ürün sildirilir
+                    alert("Ürün Silindi!")
+                }
+            }
     </script>
     <input type="button" value="Sayfadan ayrıl" onclick="kontrol()" />
+    <input type="button" value="Ürün Sil" onclick="urunSil()" />
+    <input type="button" value="Selam ver" onclick="alert('selam merhaba')" />
+    
+    <hr>
+    
+    <h2>onMouseOver Olayı</h2>
+    <p>
+        Ekrandaki her hangi bir nesne üzerine geldiğimizde çalışır
+    </p>
+    <a href="#" onmouseover="alert('onMouseOver çalıştı')">onMouseOver</a>
+    <a href="#" onmouseout="alert('onmouseout çalıştı')">onmouseout</a>
+
+    <hr>
+    
+    <h2>onFocus Olayı</h2>
+    <p>
+        Ekrandaki her henagi bir element seçildiğinde çalışır.
+    </p>
+    
+    <input type="text" name="name" value="Buraya tıkla" onfocus="this.value='Fokus çalıştı'" />
+    
+    <input type="text" name="name" value="Buraya tıkla" onfocus="value='Fokus çalıştı'" />
+
+    <hr>
+    
+    <h2>onBlur Olayı</h2>
+    <p>
+        Ekrandaki her henagi bir element seçilip elementden çıkılınca çalışır.
+    </p>
+    <input type="text" name="name" value="Buraya tıkla" 
+    onfocus="this.value='Fokus çalıştı'" 
+    onblur="this.value='onblur çalıştı'" />
+    
+    <hr>
+
+    <h2>onChange Olayı</h2>
+    <p>
+        Sayfadaki elementlerde değişiklik olduğunda çalışır
+    </p>
+     <form>
+        <select name="liste" onchange="window.open(sec(this))">
+            <option value="#">Bir arama motoru seçiniz</option>
+            <option value="https://www.google.com.tr/">Google</option>
+            <option value="https://www.bing.com.tr/">Bing</option>
+            <option value="https://www.yahoo.com/">Yahoo</option>
+            <option value="https://www.yandex.com.tr/">Yandex</option>
+        </select>
+    </form>
+    <script>
+        function sec(s) {
+            return s.options[s.selectedIndex].value
+        }
+    </script>
+    
+    <hr>
+    
+    <h2 id="olayBaslik">AddEventListener - Olay Dinleyici Kullanımı</h2>
+    <p>
+        Javascript ile sayfamızdaki gerçekleşecek olayları takip edip gerçekleştiğinde işlem yaptırabiliriz.
+    </p>
+    <script>
+        function myfunction() {
+            alert('AddEventListener çalıştı!')
+        }
+        document.getElementById("olayBaslik").addEventListener("click", myfunction)
+
+        function removeHandler() { // olay dinlemeyi devre dışı bırakma
+            document.getElementById("olayBaslik").removeEventListener("click", myfunction)
+        }
+    </script>
+    <button onclick="removeHandler()">removeEventListener</button>
 </body>
 </html>
