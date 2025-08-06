@@ -14,5 +14,52 @@
     <p>
         3 farklı yöntem kullanarak projemize ekleyebiliriz.
     </p>
+    <h5>
+        1-CDN sitelerinden alınan kod satırını sayfamıza ekleyerek hemen kullanabiliriz
+    </h5>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"></script>
+    <h5>
+        2-Nuget paket yöneticisi üzerinden yükleyebiliriz.
+    </h5>
+    <p>
+        <br />Eğer Visual Studio ile uygulama geliştiriyorsak,
+        <br>
+        Solution explorer > ProjeAdı (sağ tık) > Manage Nuget .. > Browse > Jquery > install
+    </p>
+    <h5>
+        3-Jquery nin kendi sitesinden veya herhangi bir siteden bilgisayara indireceğimiz js dosyasını projeye ekleyip sürükle bırakla sayfada çağırarak kullanabiliriz.
+    </h5>
+    <h2 id="baslik">Html Elementlerini Id ye Göre Seçme</h2>
+    <p id="mesaj" style="border:1px outset"></p>
+    <script>
+        // jquery kodları $ ile yazılır
+        $(document).ready(function () {
+            // (document).ready() metodu sayfa yüklemesi tamamlandığında kodlarımızın çalışmasını sağlar
+            // jquery seçim işlemlerinde css seçicilerini kullanır
+            var secilecekEleman = $("#baslik") // id si baslik olan elementi seç
+            var secilecekEleman2 = document.getElementById("baslik") // normal js ile id ye göre seçim
+            $("#mesaj").text("başlıktan gelen içerik : " + secilecekEleman[0].innerText)
+        })
+    </script>
+
+    <hr />
+
+    <h2 id="etiket">Html Elementlerini Etiket Adına(Html Taglarına) Göre Seçme</h2>
+    <p id="etiketmesaj" style="border:1px outset red"></p>
+    <script>
+        var secilecekElemanlar = $("h2")
+        $("#etiketmesaj").text("başlıktan gelen içerik :" + secilecekElemanlar[1].innerText)
+    </script>
+    
+    <hr />
+
+     <h2 id="sinif" class="sinif">Html Elementlerini Class Adına Göre Seçme</h2>
+    <p id="sinifmesaj" class="sinif" style="border:1px outset blueviolet"></p>
+    <script>
+        var secilecekElemanlar = $(".sinif")
+        $("#sinifmesaj").text("başlıktan gelen içerik :" + secilecekElemanlar[0].innerText)
+    </script>
 </body>
 </html>
