@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu14-Jquery-efektler</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Konu14-Jquery-efektler</h1>
+
+    <input type="button" id="buton1" value="Fade out" />
+    <input type="button" id="buton2" value="Fade in" />
+    <input type="button" id="buton3" value="Fade to" />
+    <button id="buton4">Fade Toggle</button>
+
+    <div id="box" style="background-color:green; height:100px; width:100px; margin:1rem; padding:1rem; color:beige">
+        <h2>Jquery de efekt kullanımı</h2>
+    </div>
+
+    <script>
+        $("#buton1").on("click", function () {
+            $("h1").fadeOut()
+            $("#box").fadeOut()
+        });
+        $("#buton2").on("click", function () {
+            $("h1").fadeIn()
+            $("#box").fadeIn()
+        });
+        $("#buton3").on("click", function () {
+            $("h1").fadeTo(1000, 0.7)// süre-milisaniye, opacity
+            $("#box").fadeTo(1000, 0.3)
+        });
+        $("#buton4").on("click", function () {
+            $("h1").fadeToggle()
+            $("#box").fadeToggle()
+        });
+    </script>
+
+    <hr>
+
+    <input type="button" id="buton5" value="Yükseklik animasyonu" />
+    <input type="button" id="buton6" value="animasyonu sıfırla" />
+
+    <script>
+        $("#buton5").on("click", function () {
+            $("#box").animate({ "height": "200px" })
+        })
+        $("#buton6").on("click", function () {
+            $("#box").animate({ "height": "100px" })
+        })
+    </script>
+
+</body>
+</html>

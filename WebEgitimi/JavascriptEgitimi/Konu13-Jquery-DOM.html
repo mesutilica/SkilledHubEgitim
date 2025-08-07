@@ -86,7 +86,71 @@
     <input type="button" id="button4" value="Html elementleri sil" />
     <script>
         $("#button4").on("click", function () {
-            $("#silinecek").remove() // silinecek id li elementi sil
+            // $("#silinecek").remove() // silinecek id li elementi sil
+            // $("#silinecek").empty() // elementi boşalt
+
+            document.getElementById("silinecek").remove() // js ile
+        });
+    </script>
+    
+    <hr />
+
+    <h2>Jquery ile Html Elementleri Gizleme/Gösterme</h2>
+
+    <ul>
+        <li id="anasayfaLink">Anasayfa</li>
+        <li id="hakkimizdaLink">Hakkımızda</li>
+        <li id="urunlerimizLink">Ürünlerimiz</li>
+        <li id="iletisimLink">İletişim</li>
+    </ul>
+    <div id="anasayfa" style="border: 1px dashed red;">
+        Anasayfa içeriği
+    </div>
+    <div id="hakkimizda" style="display: none; border: 1px dashed red;">
+        Hakkımızda içeriği
+    </div>
+    <div id="urunlerimiz" style="display: none; border: 1px dashed red;">
+        Ürünlerimiz içeriği
+    </div>
+    <div id="iletisim" style="display: none; border: 1px dashed red;">
+        İletişim sayfası içeriği
+    </div>
+    <script>
+        $("#hakkimizdaLink").on("click", function () {
+            $("#anasayfa").hide()
+            $("#hakkimizda").show()
+            $("#iletisim").hide()
+            $("#urunlerimiz").hide()
+        });
+        $("#urunlerimizLink").on("click", function () {
+            $("#anasayfa").hide()
+            $("#hakkimizda").hide()
+            $("#iletisim").hide()
+            $("#urunlerimiz").show()
+        });
+    </script>
+
+    <hr>
+
+    <h2>Jquery ile Change Olayını Yakalama</h2>
+    <input type="text" id="degisim" />
+    <h3 id="jqchange"></h3>
+    
+    <h4>Kategoriler</h4>
+    <select class="degisim">
+        <option value="Elektronik">Elektronik</option>
+        <option value="Bilgisayar">Bilgisayar</option>
+        <option value="Telefon">Telefon</option>
+    </select>
+    <script>
+        $(".degisim").on("change", function () {
+            $("#jqchange").html($(this).val())
+        });
+        $("#degisim").change(function () {
+            $("#jqchange").text($(this).val())
+        });
+        $("#degisim").on("keyup", function () {
+            $("#jqchange").html($(this).val())
         });
     </script>
 </body>

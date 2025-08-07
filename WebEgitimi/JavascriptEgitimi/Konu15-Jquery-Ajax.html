@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konu15-Jquery-Ajax</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Konu15-Jquery-Ajax</h1>
+    <p>
+        AJAX, İnternet sayfalarında JavaScript ve XMLHttpRequest kullanımı ile etkileşimli uygulamalar oluşturmamızı sağlayan yönetimin adıdır.
+    </p>
+    <p>
+        Normalde form verileri tüm sayfayla birlikte sunucuya yollanırken AJAX da sadece ilgili alan veya içindeki veriler sunucuya yollanır ve sunucudan dönen cevaba göre ekranda işlem yapmamızı sağlar.
+    </p>
+    <p>
+        AJAX uygulamalarımızda hızlanmaya ve veri kullanımını azaltmaya yardımcı olur.
+    </p>
+    <form action="" method="get">
+        <input type="text" name="urunAdi" placeholder="Ürün Adı" />
+        <input type="text" name="urunFiyati" placeholder="Ürün Fiyatı" />
+        <input type="submit" value="Kaydet" />
+    </form>
+    <hr>
+    <p id="ajax" style="border:thin solid red"></p>
+    <input type="button" id="getir" value="Ajax ile içerik yükle" />
+    <script>
+        $("#getir").click(function () {
+            $.ajax({
+                url: "Ajaxicerik.txt", // ajax isteğini göndereceğimiz adres
+                success: function (sonuc) { // işlem başarılı olursa çalışacak kod bloğu
+                        $("#ajax").html(sonuc)
+                    },
+                error: function () { // işlem başarısız olursa çalışacak kod bloğu
+                        $("#ajax").html("Hata oluştu!")
+                        console.error("hata oluştu")
+                    }
+            })
+        });
+    </script>
+</body>
+</html>
