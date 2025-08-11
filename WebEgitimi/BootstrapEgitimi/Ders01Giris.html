@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Giris</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Bootstrap Giris</h1>
+    <p>
+        Bootstrap, HTML, CSS ve JavaScript kullanılarak yazılmış, açık kaynaklı ve ücretsiz bir front-end
+        kütüphanesidir. Eski
+        Twitter çalışanları Mark Otto ve Jacob Thornton tarafından oluşturulan bu kütüphane, geliştiricilere duyarlı web
+        siteleri oluşturabilme imkanı sağlar. Bootstrap'in sunduğu tasarım şablonları, tipografi, formlar, butonlar ve
+        navigasyon gibi arayüz bileşenleri oluşturmakta kullanılabilmektedir. Bu sayede geliştiriciler, estetik
+        konularla
+        uğraşmadan uygulama geliştirirken, tasarımcılar için de çekici temalar oluşturma konusunda güçlü bir temel
+        sunmaktadır.
+    </p>
+    <h2>
+        Bootstrapi Projeye Yükleme
+    </h2>
+    <ol>
+        <li>Nuget veya Npm paket yöneticisi üzerinden</li>
+        <li>Bootstrap sitesinden indirip manuel yükleyebiliriz</li>
+        <li>Hazır cdn kütüphane sitelerinden alacağımız kodu sayfaya ekleyerek kullanabiliriz</li>
+    </ol>
+    <p>
+        Bootstrap ekranı 12 eşit parçaya bölerek kullanır.
+        Exceldeki grid-ızgara mantığıyla elemenları konumlandırır.
+        Css Flex alt yapısını kullanır.
+    </p>
+    <h3>Bootstrap Kırılım Noktaları</h3>
+    <p>
+        Bootstrap uygulamaya bağlanılan ekran çözünürlüğünü algılayarak kullanıcıya farklı responsive tasarımlar göstermemizi sağlar.
+    </p>
+    <table>
+        <tr>
+            <th>Kırılım Noktası</th>
+            <th>Ön ek</th>
+            <th>Ölçü</th>
+        </tr>
+        <tr>
+            <td>x-small</td>
+            <td>xs</td>
+            <td>576px ve altı</td>
+        </tr>
+        <tr>
+            <td>small</td>
+            <td>sm</td>
+            <td>576px ve üstü</td>
+        </tr>
+        <tr>
+            <td>medium</td>
+            <td>md</td>
+            <td>768px ve üstü</td>
+        </tr>
+        <tr>
+            <td>large</td>
+            <td>lg</td>
+            <td>992px ve üstü</td>
+        </tr>
+        <td>
+            <td>extra large</td>
+            <td>xl</td>
+            <td>1200px ve üstü</td>
+        </td>
+        <tr>
+            <td>extra extra large</td>
+            <td>xxl</td>
+            <td>1400px ve üstü</td>
+        </tr>
+    </table>
+
+    <hr style="border: 10px solid red;">
+
+    <h3>Containers - Kapsayıcı</h3>
+    <div class="container" style="border-bottom: 10px solid red;">
+        container sınıfı kullanarak içeriği ortalayabileceğimiz kapsayıcı bir element kullanabiliriz.
+    </div>
+
+    <div class="container-fluid">
+        container-fluid sınıfı kullanarak içeriği tüm ekranı kapsayan bir element kullanabiliriz.
+    </div>
+</body>
+</html>
