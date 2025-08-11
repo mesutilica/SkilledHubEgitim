@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ders03Hizalama</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bootstrap Hizalama</h1>
+      <p>
+        Bootrstarp css display flex özelliğini kullanır ve dikeyde yatayda buna
+        göre hizalama yapar.
+      </p>
+      <h2>Kolonları Dikeyde Hizalama</h2>
+      <h3>Hizalama class ları</h3>
+      <ol>
+        <li>align-items-start : başlangıça hizala</li>
+        <li>align-items-center : merkeze hizala</li>
+        <li>align-items-end : sona hizala</li>
+      </ol>
+
+      <div class="row row-cols-3 align-items-end" style="min-height: 180px; background-color: antiquewhite;">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+      </div>
+      <h2>Kolonları Yatayta Hizalama</h2>
+      <ol>
+        <li>justify-content-start : başa hizala</li>
+        <li>justify-content-center : merkeze hizala</li>
+        <li>justify-content-end : sona hizala</li>
+        <li>justify-content-around : her iki yana eşit boşlukla hizala</li>
+        <li>justify-content-between : ilk öğe başa, son öğe sona gelecek şekilde boşlukla hizala</li>
+        <li>justify-content-evenly : tüm kolonları eşit şekilde boşlukla hizala</li>
+      </ol>
+      <div class="row justify-content-evenly " style="min-height: 180px; background-color: antiquewhite;">
+        <div class="col-1">1</div>
+        <div class="col-1">2</div>
+        <div class="col-1">3</div>
+      </div>
+
+      <h2>Metin Hizalama</h2>
+      <p class="text-center">
+        text-center classı elementteki içeriği ortalamamızı sağlar
+      </p>
+      <p class="text-end">
+        class="text-end"
+      </p>
+      <p class="text-start">
+        class="text-start"
+      </p>
+      <p class="text-center">
+        <img src="/Resimler/logo.avif" alt="">
+      </p>
+
+    </div>
+  </body>
+</html>
