@@ -1,4 +1,61 @@
-﻿
-@{
-    ViewData["Title"] = "MVC01 Razor Syntax";
+﻿@{
+    ViewBag.Title = "MVC Razor Syntax";
+
+    string urunAdi = "Bilgisayar";
+    decimal fiyat = 58000;
+    decimal kdv = 1.20M;
+    string[] isimler = { "Murat", "Ali", "Cem", "Mesut", "Alparslan" };
+    var tarih = DateTime.Now; // yorum satırı
+}
+
+<h2>MVC Razor Syntax</h2>
+<h6>Title : @ViewBag.Title</h6>
+<p>
+    C# kodu ile html kodlarını karışık yazabiliyoruz. Ekrandaki metnin c# kodu olduğunu başına eklenen at ifadesinden anlıyor sistem. Bu yazım şekline de razor syntax ı deniliyor
+</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <img src="~/Images/ayna-1.webp" class="img-fluid" />
+    </div>
+    <div class="col-sm-6">
+        <h4>Ürün Adı :  @urunAdi</h4>
+        <h4>Ürün Fiyatı :  @fiyat ₺</h4>
+        <h4>Kdv Dahil :  @(fiyat * kdv) ₺</h4>
+    </div>
+</div>
+
+<hr />
+
+<h4>
+    Tarih ve saat :  @tarih
+</h4>
+
+<h4>
+    Kısa Tarih :  @tarih.ToShortDateString()
+</h4>
+
+@if (tarih.Hour > 18)
+{
+    <h5>İyi Akşamlar</h5>
+}
+else if (tarih.Hour > 12 && tarih.Hour < 18)
+{
+    <h5>İyi Günler</h5>
+}
+else
+{
+    <h5>İyi Sabahlar</h5>
+}
+
+<h2>Dizideki İsimler</h2>
+
+@foreach (var isim in isimler)
+{
+    if (isim == isimler[0])
+    {
+        <div class="active">İlk İsim : @isim</div>
+    }
+    @isim
+    <hr />
 }
