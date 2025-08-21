@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "MVC02 Html Helpers";
+}
+
+<h2>MVC02 Html Helpers</h2>
+
+@Html.ActionLink("Anasayfa", "Index", "Home")
+
+@Html.ActionLink("MVC01 Razor Syntax", "Index", "MVC01RazorSyntax")
+
+<a href="/">Anasayfa</a>
+
+<hr />
+
+<h3>
+    Html Checkbox Oluşturma
+</h3>
+
+<label>
+    <input type="checkbox" name="cbOnay" /> Onaylıyorum
+</label>
+
+<br />
+
+<label>
+    @Html.CheckBox("Onay") Onaylıyorum
+</label>
+
+<hr />
+
+<h3>
+    Html TextBox Oluşturma
+</h3>
+
+<input id="txtSoyad" name="txtSoyad" type="text" value="">
+
+<br />
+
+@Html.TextBox("txtAd") Ekranda type ı text olan giriş(input) elementi oluşturur.
+
+<h4>
+    Html Editor
+</h4>
+
+<input id="txtMiktar" name="txtMiktar" type="number" value="1">
+
+<br />
+
+@Html.Editor("txtMiktar") Ekranda veri tipine göre otomatik tipi ayarlı giriş(input) elementi oluşturur.
+
+<hr />
+
+<h3>
+    Html Hidden(Gizli Element) Oluşturma
+</h3>
+
+@Html.Hidden("GizliElement", "Html Hidden(Gizli Element) deki veriler sadece sayfa kaynağında görünür")
+
+"Html Hidden(Gizli Element) deki veriler sadece sayfa kaynağında görünür"
+
+<hr />
+
+<h3>
+    Html Label Oluşturma
+</h3>
+
+@Html.Label("lblAd", "Html label elementi")
+
+<hr />
+
+<h3>
+    Html Textarea(Çok satırlı input) Oluşturma
+</h3>
+
+@Html.TextArea("txtAdres", "Html Textarea(Çok satırlı input) Oluşturma")
+
+<hr />
+
+<h3>
+    Html Password(Şifre alanı) Oluşturma
+</h3>
+
+@Html.Password("txtPassword")
+
+<hr />
+
+<h3>
+    Html Helpers ile Form Oluşturma
+</h3>
+
+@using (Html.BeginForm())
+{
+    <h4>Kullanıcı Adı</h4>
+    @Html.Editor("txtKullaniciAdi")
+    <h4>Şifre</h4>
+    @Html.Password("txtPassword")
+    <br />
+    <input type="submit" value="Giriş" />
+}
+
+<hr />
+
+<h3>Listbox ve DropDownList Elementi Kullanımı</h3>
+
+@{
+    var liste = new SelectListItem[]{
+                new SelectListItem() { Text = "Bilgisayar"},
+                new SelectListItem() { Text = "Elektronik"},
+                new SelectListItem() { Text = "Telefon"}
+                    };
+}
+
+@Html.ListBox("lbListe", liste)
+<br />
+
+@Html.DropDownList("ddlListe", liste)
+
+<hr />
+
+
+<h3>RadioButton Elementi Kullanımı</h3>
+
+<h5>Sözleşmeyi</h5>
+<label>
+    @Html.RadioButton("rbOnay", "Onay")  Onaylıyorum
+</label>
+<label>
+    @Html.RadioButton("rbOnay", "Red") Onaylamıyorum
+</label>
+
+<hr />
+
+@{
+    string htmlRawOrnek = "<h5>Html Raw ile Ekrana Html içerik yazdırma</h5>";
+}
+
+
+<h3>Html Raw ile Ekrana Html içerik yazdırma</h3>
+
+@htmlRawOrnek
+
+@Html.Raw(htmlRawOrnek)
+
+@Html.Raw("<b style='color:red'>Html Raw ile Ekrana Html içerik yazdırma</b>")
+
+<hr />
+
+<h2>Tag Helpers</h2>
+
+<h3>
+    a Elementi
+</h3>
+
+<a asp-action="Index" asp-controller="Home" asp-route-id="18">Anasayfa</a>
+
+<h3>
+    Form Oluşturma
+</h3>
+
+<form asp-action="Index" asp-controller="MVC02HtmlAndTagHelpers" method="post">
+    <h4>Kullanıcı Adı</h4>
+    <input id="txtKullaniciAdi" name="txtKullaniciAdi" type="text" value="">
+    <h4>Şifre</h4>
+    <input id="txtSifre" name="txtSifre" type="text" value="">
+    <br />
+    <input type="submit" value="Giriş" />
+</form>

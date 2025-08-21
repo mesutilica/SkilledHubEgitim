@@ -54,8 +54,70 @@ else
 {
     if (isim == isimler[0])
     {
-        <div class="active">İlk İsim : @isim</div>
+        <div class="active border">İlk İsim : @isim</div>
     }
-    @isim
+    else
+    {
+        @isim
+        <hr />
+    }
+}
+
+<hr />
+Listedeki 2. isim : @isimler[1]
+<hr />
+
+@foreach (var isim in isimler)
+{
+    <h6>@isim</h6>
+}
+
+<hr />
+
+@foreach (var isim in isimler)
+{
+    @(isim + " ") // isimleri aralarına boşluk bırakarak yazdırır
+    @:İsim :  @isim -
+}
+
+<h3>For Örneği</h3>
+
+@for (var i = 0; i < isimler.Length; i++)
+{
+    <text>İsim : @isimler[i] </text>
     <hr />
 }
+
+<h3>For Örneği 2</h3>
+
+@for (var i = 0; i < isimler.Length; i++)
+{
+    @:İsim : @isimler[i]
+    <hr />
+}
+
+<p>
+    info@deneme.com şeklinde at ifadesinden ince yapışık metin varsa bunun c# kodu olmadığını razor syntax anlar.
+</p>
+
+<h5>
+    Kullanıcı Adı :  @@aspnet
+</h5>
+
+<input type="email" name="email" placeholder="@@E-Mail Adresiniz Yazınız">
+
+<p>
+    kullanıcı adı vb başında @@ işareti olan bir metin kullanmak için çift @@ işareti eklemeliyiz.
+</p>
+
+<h3>
+    Üretim Yılı
+</h3>
+
+<select>
+    <option value="">Seçiniz</option>
+    @for (int i = DateTime.Now.Year; i > 2000; i--)
+    {
+        <option value="@i">@i</option>
+    }
+</select>

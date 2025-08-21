@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "MVC03 Data Transfer";
+}
+
+<h1>MVC de Controller dan View a Veri Gönderme</h1>
+
+<h3>@ViewBag.UrunKategorisi Ürüneri</h3>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Ürün Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewBag.Urunler)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati ₺</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>
+        @TempData["UrunBilgi"]
+    </caption>
+</table>
+<h5> @TempData["UrunBilgi"]</h5>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Ürün Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewData["Urunler"] as List<Urun>)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati ₺</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>
+        @TempData["UrunBilgi"]
+    </caption>
+</table>
+
+<hr />
+
+<h2>MVC de View dan Controller a Veri Gönderme</h2>
+
+<h3>
+    1-Get Metoduyla Veri Gönderme
+</h3>
+
+<form action="/MVC03DataTransfer/Index" method="get">
+    <input type="text" name="txtAra" />
+    <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+
+@ViewBag.GetVerisi
