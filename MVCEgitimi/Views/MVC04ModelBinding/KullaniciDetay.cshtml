@@ -1,0 +1,24 @@
+﻿@model Kullanici
+@{
+    ViewData["Title"] = "Kullanıcı Detayı";
+}
+<h1>Kullanıcı Detayı</h1>
+
+<h3>
+    Model içerisinden gelen verileri ekranda gösterme
+</h3>
+
+<table class="table">
+    <tr>
+        <td>Ad</td>
+        <td>@Model.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Model.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+</table>
