@@ -22,3 +22,30 @@
         <td>@Model.Email</td>
     </tr>
 </table>
+
+<h3>
+    Model içerisinden gelen verileri düzenleme
+</h3>
+
+<form asp-action="KullaniciDetay" method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>Ad</td>
+            <td>@Html.TextBoxFor(model => model.Ad)</td>
+        </tr>
+        <tr>
+            <td>Soyad</td>
+            <td>@Html.EditorFor(model => model.Soyad)</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.EditorFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Kaydet" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>

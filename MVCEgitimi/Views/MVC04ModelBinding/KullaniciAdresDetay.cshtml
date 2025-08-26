@@ -1,0 +1,44 @@
+﻿@model UyeSayfasiViewModel
+@{
+    ViewData["Title"] = "Kullanıcı Detayı";
+}
+<h1>Kullanıcı Detayı</h1>
+
+<h3>
+    Model içerisinden gelen verileri ekranda gösterme
+</h3>
+
+<table class="table">
+    <tr>
+        <td>Ad</td>
+        <td>@Model.Kullanici.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Model.Kullanici.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Kullanici.Email</td>
+    </tr>
+</table>
+
+<h1>Adres Bilgileri</h1>
+
+@if (Model is not null)
+{
+    <table class="table">
+        <tr>
+            <td>Şehir</td>
+            <td>@Model.Adres.Sehir</td>
+        </tr>
+        <tr>
+            <td>İlçe</td>
+            <td>@Model.Adres.Ilce</td>
+        </tr>
+        <tr>
+            <td>Acik Adres</td>
+            <td>@Model.Adres.AcikAdres</td>
+        </tr>
+    </table>
+}
