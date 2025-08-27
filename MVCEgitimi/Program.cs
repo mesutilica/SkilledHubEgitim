@@ -1,3 +1,5 @@
+using MVCEgitimi.Models;
+
 namespace MVCEgitimi
 {
     public class Program
@@ -8,6 +10,8 @@ namespace MVCEgitimi
 
             // Add services to the container.
             builder.Services.AddControllersWithViews(); // Uygulamada MVC controller view yapýsýný kullanacaðýz
+
+            builder.Services.AddDbContext<UyeContext>(); // projede kullanacaðýmýz dbcontext sýnýfýmýzý uygulamaya tanýtýyoruz.
 
             var app = builder.Build(); // builder nesnesi üzerinden eklenen servislerle beraber app onesnesi oluþturuluyor
 
