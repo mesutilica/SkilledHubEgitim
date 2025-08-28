@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Uye>
+
+@{
+    ViewBag.Title = "MVC Partial Kullanımı";
+    ViewData["CurrentMenu"] = "active";
+}
+
+<h2>MVC Partial Kullanımı</h2>
+
+<p>
+    Partial parça anlamına gelir ve kod sayısı fazlalaşan ve karmaşıklaşan uygulamalarda sayfalarımızı parçalara ayırarak yönetmemizi kolaylaştırır.
+</p>
+
+<ul class="navbar-nav">
+    @Html.Partial("_PartialMenu")
+</ul>
+
+<hr />
+
+<h3>Partial Model Kullanimi</h3>
+
+<p>
+    Datayı yolladığımızda Mvc otomatik model bindingile modeli aktarıyor
+</p>
+
+@Html.Partial("_PartialModelKullanimi")
+
+<h3>RenderPartial</h3>
+@{
+    Html.RenderPartial("_PartialModelKullanimi", Model);
+}
+
+<p>
+    Html.RenderPartial() HTML çıktısını doğrudan yanıt akışına yazar.
+</p>
+
+<p>
+    Html.Partial() ise HTML çıktısını bir dize olarak döndürür.
+
+    Bu yöntem, döndürülen çıktının bir değişkene atanmasını veya manipüle edilmesini sağlar.
+</p>
+
+<h3>
+    Partial Tag Helper Kullanımı
+</h3>
+
+<ul class="navbar-nav">
+    <partial name="_PartialMenu" />
+</ul>
+
+<h3>Partialda Model Kullanımı</h3>
+
+<partial name="_PartialModelKullanimi" />
+
+<h3>
+    PartialAsync Kullanımı
+</h3>
+
+<ul class="navbar-nav">
+    @await Html.PartialAsync("_PartialMenu")
+</ul>
+
+<h3>Partialin Asenkron Çağrılması</h3>
+
+@await Html.PartialAsync("_PartialModelKullanimi", Model)
+
+<h3>RenderPartialAsync</h3>
+@{
+    await Html.RenderPartialAsync("_PartialModelKullanimi", Model);
+}

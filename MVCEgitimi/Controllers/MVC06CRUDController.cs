@@ -22,7 +22,8 @@ namespace MVCEgitimi.Controllers
         // GET: MVC06CRUDController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var kayit = _context.Uyeler.Find(id);
+            return View(kayit);
         }
 
         // GET: MVC06CRUDController/Create
@@ -51,37 +52,44 @@ namespace MVCEgitimi.Controllers
         // GET: MVC06CRUDController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var kayit = _context.Uyeler.Find(id); // uyeler tablosunda route dan gelen id ile eşleşen kaydı bul ve ekrana gönder.
+            return View(kayit);
         }
 
         // POST: MVC06CRUDController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Uye collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                _context.Uyeler.Update(collection); // ekrandan gelen modeli veritabanındaki kaydı değiştirecek şekilde ayarla
+                _context.SaveChanges(); // değişiklikleri db ye kaydet
+                return RedirectToAction(nameof(Index)); // Index isimli action metoduna yönlendir.
             }
             catch
             {
-                return View();
+                ModelState.AddModelError("", "Hata Oluştu!");
             }
+            return View(collection);
         }
 
         // GET: MVC06CRUDController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var kayit = _context.Uyeler.Find(id);
+            return View(kayit);
         }
 
         // POST: MVC06CRUDController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Uye collection)
         {
             try
             {
+                _context.Uyeler.Remove(collection); // Ekrandan gelen uye nesnesini silinecek olarak işaretle.
+                _context.SaveChanges(); // değişiklikleri db ye kaydet
                 return RedirectToAction(nameof(Index));
             }
             catch

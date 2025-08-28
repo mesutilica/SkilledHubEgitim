@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MVCEgitimi.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("OzelCss", required: false)
 </head>
 <body>
     <header>
@@ -41,6 +42,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="MVC06CRUD" asp-action="Index">CRUD İşlemleri</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="MVC07Section" asp-action="Index">Section</a>
+                        </li>
+                        <partial name="_PartialMenu" />
                     </ul>
                 </div>
             </div>
@@ -53,6 +58,7 @@
     </div>
 
     <footer class="border-top footer text-muted">
+        @await RenderSectionAsync("OzelIcerik", required: false)
         <div class="container">
             &copy; 2025 - MVCEgitimi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
         </div>
