@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "File Upload - Dosya Yükleme İşlemi";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="file" name="dosya"  />
+    <input type="submit" value="Yükle" class="btn btn-primary" />
+</form>
+
+<hr />
+
+<img src="/Images/@TempData["Resim"]" alt="Resim yok" height="118" />
+
+<h6>Resim Adı: @TempData["Resim"]</h6>
+
+<p>
+    Dosya yüklemek için bir form elementine ihtiyaç var.
+    Form elementine enctype="multipart/form-data" attribute ünü eklemek zorundayız
+    Formda dosya yüklemek için type ı file olan element gerekli
+    File elementine verilen isim önemli post metodunda bu elementin name değerine göre eşleşme sağlanıyor!
+</p>
