@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Mvc Cookie (Çerez) Kullanımı";
+}
+
+<h1>Mvc Cookie (Çerez) Kullanımı</h1>
+
+<p>
+    Çerezler kullanıcının cihazında saklanan küçük verilerdir.
+    <br />
+    Güvenlik gerektiren verileri burada kullanmak sakıncalıdır.
+    <br />
+    Kullanıcıyı tanımlamak ve sonraki girişinde tanıyabilmek için kullanılır.
+</p>
+
+<h2>Cookie Oluştur</h2>
+
+<form action="/MVC11Cookie/CookieOlustur" method="post">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı" required />
+    <input type="password" name="sifre" placeholder="Şifre" required />
+    <input type="submit" value="Giriş" />
+</form>
+
+<a href="MVC11Cookie/CookieOku">
+    Cookie Oku
+</a>
+
+<h5>
+    @Html.Raw(TempData["Mesaj"])
+</h5>
