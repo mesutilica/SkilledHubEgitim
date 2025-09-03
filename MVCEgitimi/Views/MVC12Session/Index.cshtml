@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Mvc Session Kullanımı";
+}
+
+<h1>Mvc Session Kullanımı</h1>
+
+<p>
+    Session yapısı sunucu taraflı oturum işlemleri veya veri taşıma yöntemi olarak sayfalar arasında güvenli bir şekilde kullanabileceğimiz nesnelerdir.
+</p>
+
+<p>
+    Klasik .net framework mvc de session lar direk kullanılabilir fakat .net core da session kullanabilmek için program.cs dosyasında tanımlama yapmalıyız.
+</p>
+
+<h1>Session Oluştur</h1>
+
+<form action="/MVC12Session/SessionOlustur" method="post">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı" required />
+    <input type="password" name="sifre" placeholder="Şifre" required />
+    <input type="submit" value="Giriş" />
+</form>
+
+<a href="MVC12Session/SessionOku">
+    Session Oku
+</a>
+
+<h5>
+    @Html.Raw(TempData["Mesaj"])
+</h5>

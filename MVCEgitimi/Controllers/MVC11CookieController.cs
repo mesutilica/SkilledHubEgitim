@@ -46,5 +46,12 @@ namespace MVCEgitimi.Controllers
             TempData["kullaniciguid"] = HttpContext.Request.Cookies["userguid"];
             return View();
         }
+        public IActionResult CookieSil()
+        {
+            Response.Cookies.Delete("username");
+            Response.Cookies.Delete("userguid");
+
+            return RedirectToAction("CookieOku");
+        }
     }
 }

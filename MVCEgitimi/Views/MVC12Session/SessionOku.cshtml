@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Session Oku";
+}
+<h1>Session Oku</h1>
+
+<h3>Session daki kullanıcı adı :</h3>
+<h5>
+    Frontend: @Context.Session.GetString("username")
+</h5>
+<h5>
+    Backend: @TempData["kullaniciAdi"]
+</h5>
+
+<hr />
+
+<h3>Session daki kullanıcı guid :</h3>
+<h5>
+    Frontend: @Context.Session.GetString("userguid")
+</h5>
+<h5>
+    Backend: @TempData["kullaniciguid"]
+</h5>
+
+<p>
+    Giriş Yapan Kullanıcı No: @Context.Session.GetInt32("kullaniciId")
+</p>
+
+<a href="SessionSil">
+    Session Sil
+</a>

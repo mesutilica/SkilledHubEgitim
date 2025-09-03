@@ -13,6 +13,8 @@ namespace MVCEgitimi
 
             builder.Services.AddDbContext<UyeContext>(); // projede kullanacaðýmýz dbcontext sýnýfýmýzý uygulamaya tanýtýyoruz.
 
+            builder.Services.AddSession(); // bu uygulamada session kullanýmýný aktif et
+
             var app = builder.Build(); // builder nesnesi üzerinden eklenen servislerle beraber app onesnesi oluþturuluyor
 
             // Configure the HTTP request pipeline.
@@ -27,6 +29,8 @@ namespace MVCEgitimi
             app.UseRouting(); // Uygulamada Routing mekanizmasýný aktif et
 
             app.UseAuthorization(); // Uygulamada yetkilendirme kullanýmýný aktif et
+
+            app.UseSession(); // uygulamada session kullanýlabilsin
 
             app.MapStaticAssets(); // wwwroot klasöründeki statik dosylaraý haritala
             app.MapControllerRoute( // route yapýsýný aþaðýdaki ayarlarla kullan

@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Mvc String Format";
+    var tarih = DateTime.Now;
+}
+
+<p>
+    String Format : Ekrandaki verileri biçimlendirmek için kullanılır.
+</p>
+
+<h3>
+    Müşteri No : @ViewBag.MusteriNo
+</h3>
+
+<h3>
+    Satıcı No : @ViewBag.SaticiNo
+</h3>
+
+<hr />
+
+<h3>
+    Tarih Formatlama
+</h3>
+
+<h4>
+    @tarih
+</h4>
+
+Kısa Saat t : @String.Format("{0:t}", tarih)
+
+<hr />
+
+Kısa Tarih d : @String.Format("{0:d}", tarih)
+
+<hr />
+
+Yıl yyyy : @String.Format("{0:yyyy}", tarih)
+
+<h3>
+    Sayı Formatlama
+</h3>
+
+C 49.90 : @String.Format("{0:C}", 49.90)
+
+<hr />
+
+D3 18 : @String.Format("{0:D3}", 18)
+
+<hr />
+
+D5 18 : @String.Format("{0:D5}", 18)
+
+<hr />
+
+F1 15.84 : @String.Format("{0:F1}", 15.84)
+
+<hr />
+
+F2 15.9 : @String.Format("{0:F2}", 15.9)
+
+<hr />
+
+F3 15.84 : @String.Format("{0:F3}", 15.84)
