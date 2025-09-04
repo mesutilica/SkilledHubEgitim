@@ -10,12 +10,16 @@
 <li class="nav-item">
     <a class="nav-link text-dark" asp-controller="MVC11Cookie" asp-action="Index">Cookie</a>
 </li>
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-controller="MVC12Session" asp-action="Index">Session</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-controller="MVC13StringFormat" asp-action="Index">StringFormat</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-controller="MVC14AppSetting" asp-action="Index">AppSetting</a>
-</li>
+
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Diğer Konular
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/MVC12Session">Session</a></li>
+        <li><a class="dropdown-item" asp-controller="MVC13StringFormat" asp-action="Index">StringFormat</a></li>
+        <li><a class="dropdown-item" href="/MVC14AppSetting">AppSetting</a></li>
+        <li><a class="dropdown-item" href="/MVC15FiltersUsing">Filtre Kullanımı</a></li>
+    </ul>
+</div>

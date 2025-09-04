@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "Üye Girişi";
+}
+
+<h1>Üye Girişi</h1>
+
+<form asp-action="Login" method="post">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı" required />
+    <input type="password" name="sifre" placeholder="Şifre" required />
+    <input type="submit" value="Giriş" />
+</form>

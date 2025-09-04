@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using MVCEgitimi.Models;
 
 namespace MVCEgitimi
@@ -14,6 +15,11 @@ namespace MVCEgitimi
             builder.Services.AddDbContext<UyeContext>(); // projede kullanacaðýmýz dbcontext sýnýfýmýzý uygulamaya tanýtýyoruz.
 
             builder.Services.AddSession(); // bu uygulamada session kullanýmýný aktif et
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
+            {
+                x.LoginPath = "/MVC15FiltersUsing/Login"; // Admin oturum acma sayfamizi belirttik
+            });
 
             var app = builder.Build(); // builder nesnesi üzerinden eklenen servislerle beraber app onesnesi oluþturuluyor
 
